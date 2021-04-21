@@ -7,7 +7,7 @@ html, body, #root {
 }
 
 .main-container {
-    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://source.unsplash.com/random');
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://source.unsplash.com/random/');
     background-size: cover;
     background-position: center;
 
@@ -90,6 +90,9 @@ html, body, #root {
 }
 
 @media only screen and (max-width: 600px) {
+    .main-container {
+      background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://source.unsplash.com/random/800x600');
+    }
     .search {
         padding: 20px 15%;
     }

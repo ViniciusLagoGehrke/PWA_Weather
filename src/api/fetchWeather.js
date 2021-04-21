@@ -1,16 +1,9 @@
 import axios from 'axios';
 
-const URL = 'https://api.openweathermap.org/data/2.5/weather';
-const API_KEY = 'f33a484cf794d08d0148764789aaba32';
+const { REACT_APP_API_KEY } = process.env;
 
-export const fetchWeather = async (query) => {
-  const { data } = await axios.get(URL, {
-    params: {
-      q: query,
-      units: 'metric',
-      APPID: API_KEY,
-    }
-  });
-
-  return data;
+export const fetchWeather = async (query) => {  
+  const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${query}&cnt=6&appid=${REACT_APP_API_KEY}&units=metric`);
+  
+  return response;
 }
