@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchWeather } from './api/fetchWeather';
+import { formatDate } from './helpers/dateFormater';
 import './App.css';
 
 const App = () => {
@@ -12,7 +13,6 @@ const App = () => {
       setWeather(data);
     }
     fetchData('Porto');
-    console.log(weather)
   }, []);
 
   const search = async (e) => {
@@ -46,7 +46,7 @@ const App = () => {
             {weather.list.map((date, i) => {
               return(
                 <div key={i} className="day-card">
-                  <h4>{Date(weather.list[i].dt)}</h4>
+                  <h4>{(new Date(weather.list[i].dt)).getDay}</h4>
                   <div className="day-temp">
                     {Math.round(weather.list[i].main.temp)}
                     <sup>&deg;C</sup>
