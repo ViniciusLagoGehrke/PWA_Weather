@@ -1,3 +1,15 @@
+# Power Web App Weather
+
+<p>
+  <a href="https://github.com/ViniciusLagoGehrke">
+      <img src="https://img.shields.io/badge/author-Vinicius-blue?style=flat" alt="author">
+  </a>
+  <img src="https://img.shields.io/github/languages/count/ViniciusLagoGehrke/PWA_Weather?color=blue&style=flat">
+  <img src="https://img.shields.io/github/languages/top/ViniciusLagoGehrke/PWA_Weather?color=blue&style=flat">
+</p>
+
+## About this project
+
 Progressive Web Weather App using React and Open Weather Map API
 
 ## Running Scripts
